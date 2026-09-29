@@ -1,0 +1,73 @@
+:root{
+  --bg:#faf9f6; --card:#ffffff; --text:#1d2021; --muted:#5f6368;
+  --line:#e4e2dc; --accent:#1f5f5b; --accent-d:#174a47; --tint:#f1f6f5;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1.5rem}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:1rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;padding:.5rem 1rem;z-index:10}
+.skip:focus{left:0}
+
+/* Nav */
+.nav{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.nav-name{font-weight:650;color:var(--text);text-decoration:none;letter-spacing:.01em}
+.nav ul{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;list-style:none;margin:0;padding:0;font-size:.9rem}
+.nav ul a{color:var(--muted);text-decoration:none;padding:.25rem 0;border-bottom:1px solid transparent}
+.nav ul a:hover,.nav ul a.active{color:var(--text);border-bottom-color:var(--accent)}
+
+/* Hero */
+.hero-body{padding:5.5rem 0 5rem}
+.eyebrow{margin:0 0 1.75rem;font-size:.85rem;color:var(--muted)}
+h1{margin:0;font-size:clamp(2.75rem,8vw,4.75rem);line-height:1.05;font-weight:700;letter-spacing:-.03em}
+.subtitle{margin:1.25rem 0 0;font-size:clamp(1.15rem,2.6vw,1.5rem);color:var(--accent);font-weight:500}
+.quals{margin:.75rem 0 0;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:.75rem;margin:2.25rem 0 0}
+.links a{display:inline-block;padding:.55rem 1.1rem;border:1px solid var(--text);color:var(--text);text-decoration:none;border-radius:3px;font-size:.92rem;font-weight:550;transition:background .15s,color .15s}
+.links a:hover{background:var(--text);color:#fff}
+
+/* Sections */
+.section{padding:4rem 0;border-top:1px solid var(--line)}
+h2{margin:0 0 1.25rem;font-size:1.6rem;letter-spacing:-.015em;line-height:1.25}
+.about{max-width:42rem;margin:0;font-size:1.08rem}
+.lede{margin:-.5rem 0 2rem;color:var(--muted)}
+
+/* Cards */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1.5rem;transition:border-color .2s,box-shadow .2s}
+.card:hover{border-color:#c9c6bd;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.card-tool{grid-column:1/-1;background:var(--tint);border-color:#cfe0dd;border-left:4px solid var(--accent)}
+.num{margin:0 0 .5rem;font-size:.82rem;color:var(--muted)}
+.card h3{margin:0;font-size:1.25rem;line-height:1.3;letter-spacing:-.01em;overflow-wrap:anywhere}
+.tags{margin:.4rem 0 .9rem;font-size:.86rem;color:var(--accent);font-weight:550}
+.card p{margin:0 0 .9rem;font-size:.95rem}
+.card p.num,.card p.tags{font-size:revert}
+.card p.num{font-size:.82rem}.card p.tags{font-size:.86rem;margin:.4rem 0 .9rem}
+.note{padding-top:.75rem;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem!important}
+.actions,.model{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-top:auto;padding-top:.5rem}
+.model{margin-top:0;padding-top:.5rem}
+.model-label{flex:0 0 100%;font-size:.8rem;color:var(--muted);margin-top:.25rem}
+.btn{display:inline-block;padding:.45rem .85rem;border:1px solid var(--line);background:#fff;color:var(--text);text-decoration:none;border-radius:3px;font-size:.87rem;font-weight:550;transition:border-color .15s,color .15s,background .15s}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-d);border-color:var(--accent-d);color:#fff}
+
+/* Footer */
+.footer{border-top:1px solid var(--line);padding:2.5rem 0 3rem;font-size:.9rem;color:var(--muted)}
+.footer p{margin:0 0 .3rem}
+.f-name{color:var(--text);font-weight:650}
+.footer a{color:var(--muted)}.footer a:hover{color:var(--accent)}
+.copy{margin-top:1rem!important;font-size:.8rem}
+
+@media (max-width:760px){
+  .wrap{padding:0 1.15rem}
+  .hero-body{padding:3.5rem 0 3.25rem}
+  .grid{grid-template-columns:1fr}
+  .section{padding:3rem 0}
+  .card{padding:1.25rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
