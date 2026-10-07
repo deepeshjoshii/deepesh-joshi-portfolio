@@ -72,3 +72,7 @@ h2{margin:0 0 1.25rem;font-size:1.6rem;letter-spacing:-.015em;line-height:1.25}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
+
+/* Icons */
+.ico{width:1.05em;height:1.05em;vertical-align:-.17em;margin-right:.45em;flex:none}
+.btn .ico{width:1em;height:1em;margin-right:.4em;vertical-align:-.15em}
