@@ -74,5 +74,5 @@ h2{margin:0 0 1.25rem;font-size:1.6rem;letter-spacing:-.015em;line-height:1.25}
 
 
 /* Icons */
-.ico{width:1.05em;height:1.05em;vertical-align:-.17em;margin-right:.45em;flex:none}
-.btn .ico{width:1em;height:1em;margin-right:.4em;vertical-align:-.15em}
+.ico{width:16px;height:16px;vertical-align:-.2em;margin-right:.4em;flex:none}
+.btn .ico{width:14px;height:14px;margin-right:.35em;vertical-align:-.15em}
